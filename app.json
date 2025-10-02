@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Wayora",
-    "slug": "wayora-mobile",
+    "name": "Wayonara",
+    "slug": "wayonara-mobile",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -16,14 +16,14 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.wayora.mobile"
+      "bundleIdentifier": "com.wayonara.mobile"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#2C6E49"
       },
-      "package": "com.wayora.mobile"
+      "package": "com.wayonara.mobile"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -32,13 +32,13 @@
       [
         "expo-location",
         {
-          "locationAlwaysAndWhenInUsePermission": "Allow Wayora to use your location for travel planning and navigation."
+          "locationAlwaysAndWhenInUsePermission": "Allow Wayonara to use your location for travel planning and navigation."
         }
       ],
       [
         "expo-camera",
         {
-          "cameraPermission": "Allow Wayora to access your camera for travel journal photos."
+          "cameraPermission": "Allow Wayonara to access your camera for travel journal photos."
         }
       ]
     ]

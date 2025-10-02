@@ -38,7 +38,7 @@ export default function ChatbotDialogRN({ isOpen, onClose }: ChatbotDialogProps)
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      text: "Hi! I'm Tavi, your AI travel assistant. How can I help you plan your perfect trip today?",
+      text: "Hi! I'm Wayonara, your AI travel assistant. How can I help you plan your perfect trip today?",
       isUser: false,
       timestamp: new Date(),
     }
@@ -103,7 +103,7 @@ export default function ChatbotDialogRN({ isOpen, onClose }: ChatbotDialogProps)
                 <MaterialIcons name="chat" size={24} color={COLORS.deepGreen} />
               </View>
               <View>
-                <Text style={styles.headerTitle}>Tavi</Text>
+                <Text style={styles.headerTitle}>Wayonara</Text>
                 <Text style={styles.headerSubtitle}>AI Travel Assistant</Text>
               </View>
             </View>

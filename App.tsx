@@ -43,9 +43,9 @@ export default function App() {
 
   const upcomingTrips = [
     {
-      destination: "Tokyo, Japan",
-      dates: "Jan 10-20, 2025",
-      image: "https://images.unsplash.com/photo-1542909356-08e5625abea7?w=400",
+      destination: "Sydney, Australia",
+      dates: "Oct 5-19, 2025",
+      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400",
       status: "Planning",
       price: 850
     },
@@ -59,10 +59,11 @@ export default function App() {
   ];
 
   const quickActions = [
-    { icon: 'navigation' as const, label: 'Navigation', color: COLORS.accentSecondary },
-    { icon: 'camera-alt' as const, label: 'Travel Journal', color: COLORS.accent },
-    { icon: 'people' as const, label: 'Local Guides', color: COLORS.accentTertiary },
-    { icon: 'security' as const, label: 'Travel Safety', color: COLORS.primary },
+    { icon: 'view-list' as const, label: 'Itinerary Builder', color: COLORS.accentSecondary },
+    { icon: 'share' as const, label: 'Share Journey', color: COLORS.accent },
+    { icon: 'account-balance-wallet' as const, label: 'Expenses', color: COLORS.accentTertiary },
+    { icon: 'camera-alt' as const, label: 'Travel Journal', color: COLORS.primary },
+    { icon: 'people' as const, label: 'Local Guides', color: COLORS.accent },
   ];
 
   const renderHomeScreen = () => (
@@ -74,11 +75,11 @@ export default function App() {
       {/* Header */}
       <View style={styles.header}>
         <View>
-          <Text style={styles.headerTitle}>Discover</Text>
-          <Text style={styles.headerSubtitle}>Amazing Places</Text>
+          <Text style={styles.headerTitle}>Wayonara</Text>
+          <Text style={styles.headerSubtitle}>Greetings, adventurer!</Text>
           <View style={styles.statusIndicator}>
             <View style={styles.statusDot} />
-            <Text style={styles.statusText}>Live Weather & Updates</Text>
+            <Text style={styles.statusText}>Maya Singh (MS)</Text>
           </View>
         </View>
         <TouchableOpacity style={styles.notificationButton}>
@@ -225,51 +226,51 @@ export default function App() {
   const renderTripsScreen = () => {
     const currentTrip = {
       id: 1,
-      name: "Tokyo Adventure",
-      destination: "Tokyo, Japan",
-      startDate: "2025-01-10",
-      endDate: "2025-01-20",
-      daysRemaining: 100,
-      progress: 0.3,
+      name: "NYC Explorer",
+      destination: "New York City, USA",
+      startDate: "2025-03-10",
+      endDate: "2025-03-18",
+      daysRemaining: 45,
+      progress: 0.2125,
       itinerary: [
         {
           day_number: 1,
-          date: "2025-01-10",
+          date: "2025-03-10",
           activities: [
-            { time: "09:00", name: "Arrive at Haneda Airport", location: "Tokyo Haneda Airport", booking_ref: "NH123" },
-            { time: "14:00", name: "Check-in Hotel", location: "Shibuya Grand Hotel", booking_ref: "HB456" },
-            { time: "18:00", name: "Shibuya Crossing Experience", location: "Shibuya", booking_ref: null }
+            { time: "09:00", name: "Arrive at JFK Airport", location: "JFK Airport", booking_ref: "DL123" },
+            { time: "14:00", name: "Check-in Hotel", location: "Times Square Hotel", booking_ref: "TS456" },
+            { time: "18:00", name: "Statue of Liberty Ferry", location: "Battery Park", booking_ref: null }
           ],
-          daily_notes: "First day in Tokyo - take it easy due to jet lag"
+          daily_notes: "First day in NYC - iconic sights and settling in"
         },
         {
           day_number: 2,
-          date: "2025-01-11", 
+          date: "2025-03-11", 
           activities: [
-            { time: "09:00", name: "Tokyo National Museum", location: "Ueno", booking_ref: "TM789" },
-            { time: "13:00", name: "Lunch in Harajuku", location: "Harajuku", booking_ref: null },
-            { time: "15:00", name: "Meiji Shrine Visit", location: "Shibuya", booking_ref: null }
+            { time: "09:00", name: "Central Park Walk", location: "Central Park", booking_ref: "CP789" },
+            { time: "13:00", name: "Lunch in Little Italy", location: "Little Italy", booking_ref: null },
+            { time: "15:00", name: "Brooklyn Bridge Walk", location: "Brooklyn Bridge", booking_ref: null }
           ],
-          daily_notes: "Cultural exploration day"
+          daily_notes: "Exploring NYC's famous landmarks"
         }
       ],
       bookings: {
         flights: [
-          { type: "Departure", airline: "ANA", flight: "NH123", date: "Jan 10", time: "06:30", from: "LAX", to: "HND" },
-          { type: "Return", airline: "ANA", flight: "NH124", date: "Jan 20", time: "18:00", from: "HND", to: "LAX" }
+          { type: "Departure", airline: "Delta", flight: "DL123", date: "Mar 10", time: "08:30", from: "LAX", to: "JFK" },
+          { type: "Return", airline: "Delta", flight: "DL124", date: "Mar 18", time: "20:00", from: "JFK", to: "LAX" }
         ],
         hotels: [
-          { name: "Shibuya Grand Hotel", checkin: "Jan 10", checkout: "Jan 15", nights: 5, room: "Deluxe Twin" },
-          { name: "Kyoto Traditional Inn", checkin: "Jan 15", checkout: "Jan 20", nights: 5, room: "Tatami Suite" }
+          { name: "Times Square Hotel", checkin: "Mar 10", checkout: "Mar 15", nights: 5, room: "City View Suite" },
+          { name: "Brooklyn Heights Inn", checkin: "Mar 15", checkout: "Mar 18", nights: 3, room: "Harbor View" }
         ],
         activities: [
-          { name: "Tokyo National Museum", date: "Jan 11", time: "09:00", price: "$15" },
-          { name: "Mount Fuji Day Trip", date: "Jan 13", time: "07:00", price: "$120" }
+          { name: "Statue of Liberty Tour", date: "Mar 11", time: "10:00", price: "$25" },
+          { name: "Empire State Building", date: "Mar 12", time: "14:00", price: "$45" }
         ]
       },
       journal: [
-        { type: "photo", url: "https://images.unsplash.com/photo-1542909356-08e5625abea7?w=300", caption: "Amazing ramen in Shibuya!", date: "Jan 11" },
-        { type: "video", url: "https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=300", caption: "Sunrise at Tokyo Tower", date: "Jan 10" }
+        { type: "photo", url: "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=300", caption: "Amazing view from Brooklyn Bridge!", date: "Mar 11" },
+        { type: "video", url: "https://images.unsplash.com/photo-1518391846015-55a9cc003b25?w=300", caption: "Sunrise over Manhattan", date: "Mar 10" }
       ]
     };
 
@@ -304,6 +305,7 @@ export default function App() {
               <View style={[styles.progressBar, { width: `${currentTrip.progress * 100}%` }]} />
             </View>
             <Text style={styles.tripDates}>{currentTrip.startDate} - {currentTrip.endDate}</Text>
+            <Text style={styles.budgetText}>$850 spent / $4000 total</Text>
           </View>
         </LinearGradient>
 
@@ -1342,5 +1344,11 @@ const styles = StyleSheet.create({
     fontSize: 11,
     color: COLORS.white,
     fontWeight: '500',
+  },
+  budgetText: {
+    fontSize: 14,
+    color: COLORS.textSecondary,
+    fontFamily: Platform.OS === 'ios' ? 'System' : 'Roboto',
+    marginTop: 8,
   },
 });
